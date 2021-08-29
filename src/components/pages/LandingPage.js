@@ -1,8 +1,9 @@
-import React, {Fragment} from 'react';
+import React from 'react';
+import Footer from '../Footer/Footer';
+import {Link} from 'react-router-dom';
 
 const Login = () => {
   return (
-      <Fragment>
         <div className="login-section">
           <div className="login-content">
             <div className="login-content-text-group">
@@ -12,19 +13,25 @@ const Login = () => {
               </p>
             </div>
             <div className="card">
-              <a className="card-span">Ben sadece test kullanıcısıyım. Lütfen beni anasayfaya yönlendir.</a>
+              <div className="card-span">
+                <p>Ben sadece test kullanıcısıyım. Lütfen beni anasayfaya <Link to="/home" className="login-redirect-to-home">yönlendir</Link>.</p>
+
+              </div>
               <form className="card-form-group">
-                <input type="text" className="card-input" placeholder="E-posta veya Telefon Numarası"/>
+                <input type="text" className="card-input" autoFocus="1" placeholder="E-posta veya Telefon Numarası"/>
                 <input type="password" className="card-input" placeholder="Şifre"/>
               </form>
                 <button type="submit" className="card-login">Giriş Yap</button>
-                <a href="#" className="forgot-password">Şifreni mi Unuttun ?</a>
+                <Link to="/forgot-password" className="forgot-password">Şifreni mi Unuttun ?</Link>
               <hr style={{backgroundColor:'#207567'}} className="card-hr"/>
-              <a href="" className="card-new-acc">Yeni Hesap Oluştur</a>
+              <Link to="/sign-up" className="card-new-acc">Yeni Hesap Oluştur</Link>
             </div>
           </div>
+
+          <div className="login-footer">
+            <Footer/>
+          </div>
         </div>
-      </Fragment>
   )
 }
 

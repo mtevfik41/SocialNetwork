@@ -1,0 +1,12 @@
+/sign-up
+/login
+/home
+/jobs
+/services
+/about-us
+/careers
+/privacy
+/cookies
+/policies
+/help-center
+/forgot-password
